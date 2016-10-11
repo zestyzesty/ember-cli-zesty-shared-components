@@ -16,7 +16,7 @@ Pick a version and install that sucker.
 
 Don't forget to deploy the new style guide to github pages.
 
-    ember github-pages:commit --message "Initial gh-pages release"
+    ember run deploy
     ember release --patch
     npm publish
 
