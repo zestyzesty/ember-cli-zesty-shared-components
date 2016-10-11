@@ -38,20 +38,20 @@ export default Ember.Component.extend({
 
   colorPalette: {
     'primary': {
-      'name': 'cyan',
-      'base': '#00bcd4'
+      'name': 'zesty-green',
+      'base': '#becc29'
     },
     'accent': {
-      'name': 'amber',
-      'base': '#ffc107'
+      'name': 'zesty-black',
+      'base': '#393d3d'
     },
     'secondary': {
-      'name': 'greyish',
-      'base': '#b6b6b6'
+      'name': 'zesty-gray',
+      'base': '#8c8e90'
     },
     'foreground': {
-      'name': 'blackish',
-      'base': '#212121'
+      'name': 'zesty-fog',
+      'base': '#efefef'
     },
     'background': {
       'name': 'white',
