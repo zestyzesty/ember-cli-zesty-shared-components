@@ -2,6 +2,8 @@
   "name": "ember-cli-zesty-shared-components",
   "dependencies": {
     "ember": "~2.8.0",
-    "ember-cli-shims": "0.1.1"
+    "ember-cli-shims": "0.1.1",
+    "remarkable": "1.6.2",
+    "highlightjs": "9.1.0"
   }
 }
