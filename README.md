@@ -1,13 +1,24 @@
 # Ember-cli-zesty-shared-components
 
-This README outlines the details of collaborating on this Ember addon.
+Shared components used at Zesty, view the living style guide for usage:
+
+  https://zestyzesty.github.io/ember-cli-zesty-shared-components/
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-cli-zesty-shared-components`
-* `npm install`
-* `bower install`
+Pick a version and install that sucker.
+
+   ember install ember-cli-zesty-shared-components@0.1.0
+
+# Contribution
+
+## Release
+
+Don't forget to deploy the new style guide to github pages.
+
+    ember github-pages:commit --message "Initial gh-pages release"
+    ember release --patch
+    npm publish
 
 ## Running
 
