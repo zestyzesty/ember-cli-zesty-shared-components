@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-zesty-shared-components/components/zesty/time-input/component';
