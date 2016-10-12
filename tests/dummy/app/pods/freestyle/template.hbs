@@ -3,6 +3,17 @@
   subtitle='ember-cli-zesty-shared-components'
   }}
 
+  {{#freestyle-section name='Shared components' as |section|}}
+    {{#freestyle-subsection name='time-input' section=section}}
+
+      {{#freestyle-usage 'fp' title='Time Input' usageTitle='Usage'}}
+        {{zesty/time-input format="hh:mm a"}}
+      {{/freestyle-usage}}
+
+    {{/freestyle-subsection}}
+
+  {{/freestyle-section}}
+
   {{#freestyle-section name='Visual Style' as |section|}}
     {{#freestyle-subsection name='Color' section=section}}
 
