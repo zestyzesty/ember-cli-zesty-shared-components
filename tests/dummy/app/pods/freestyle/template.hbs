@@ -4,20 +4,42 @@
   }}
 
   {{#freestyle-section name='Shared components' as |section|}}
-    {{#freestyle-subsection name='time-input' section=section}}
+    {{#freestyle-subsection name='status-filter' section=section}}
 
-      {{#freestyle-usage 'fp' title='Time Input' usageTitle='Usage'}}
-        {{zesty/time-input format="hh:mm a"}}
+      {{#freestyle-usage 'status-filter' title='Time Input' usageTitle='Usage'}}
+        {{#zesty/status-filter
+        entries=statusFilterEntries
+        property="status"
+        as |filteredEntries currentFilter setFilter|}}
+          <button onclick={{perform setFilter ""}}>All entries</button>
+          <button onclick={{perform setFilter "new"}}>New entries</button>
+          <button onclick={{perform setFilter "saved"}}>Saved entries</button>
+
+          <div>Current filter: {{currentFilter}}</div>
+
+          {{#each filteredEntries as |entry|}}
+            <div>&lt;Entry status={{entry.status}}&gt;</div>
+          {{/each}}
+        {{/zesty/status-filter}}
       {{/freestyle-usage}}
 
     {{/freestyle-subsection}}
 
+    {{#freestyle-subsection name='time-input' section=section}}
+
+      {{#freestyle-usage 'time-input' title='Time Input' usageTitle='Usage'}}
+        {{zesty/time-input
+          format="h:mm a"
+          placeholder="2:30 am"}}
+      {{/freestyle-usage}}
+
+    {{/freestyle-subsection}}
   {{/freestyle-section}}
 
   {{#freestyle-section name='Visual Style' as |section|}}
     {{#freestyle-subsection name='Color' section=section}}
 
-      {{#freestyle-usage 'fp' title='Freestyle Palette' usageTitle='Usage'}}
+      {{#freestyle-usage 'freestyle-palette' title='Freestyle Palette' usageTitle='Usage'}}
         {{freestyle-palette
         colorPalette=colorPalette
         title='Zesty color palette'
