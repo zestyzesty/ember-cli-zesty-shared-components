@@ -6,35 +6,11 @@ const { inject } = Ember;
 export default FreestyleController.extend({
   emberFreestyle: inject.service(),
 
-  /* BEGIN-FREESTYLE-USAGE fp:notes
-### A few notes regarding freestyle-palette
-
-- Accepts a colorPalette POJO like the one found in the freestyle.js blueprint controller
-- Looks very nice
-
-And another thing...
-
-###### Markdown note demonstrating prettified code
-
-```
-import Ember from 'ember';
-
-export default Ember.Component.extend({
-  // ...
-  colorPalette: {
-    'primary': {
-      'name': 'cyan',
-      'base': '#00bcd4'
-    },
-    'accent': {
-      'name': 'amber',
-      'base': '#ffc107'
-    }
-  }
-  // ...
-});
-```
-  END-FREESTYLE-USAGE */
+  statusFilterEntries: [
+    Ember.Object.create({ status: 'new' }),
+    Ember.Object.create({ status: 'new' }),
+    Ember.Object.create({ status: 'saved' })
+  ],
 
   colorPalette: {
     'primary': {
