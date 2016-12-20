@@ -28,8 +28,16 @@
     {{#freestyle-subsection name='time-input' section=section}}
 
       {{#freestyle-usage 'time-input' title='Time Input' usageTitle='Usage'}}
+        <p>
+          date: {{date}}
+        </p>
+        <p>
+          interprettedDate: {{interprettedDate}}
+        </p>
         {{zesty/time-input
           format="h:mm a"
+          value=(readonly date)
+          action=(perform updateDate)
           placeholder="2:30 am"}}
       {{/freestyle-usage}}
 
