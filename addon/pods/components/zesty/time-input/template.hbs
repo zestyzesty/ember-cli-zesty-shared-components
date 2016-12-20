@@ -1,6 +1,6 @@
-{{input
-  value=valueString
-  focus-out='valueChanged'
-  class=input-class
-  placeholder=placeholder
-}}
+<input
+value={{readonly valueString}}
+oninput={{perform valueChanged value="target.value"}}
+class=input-class
+placeholder=placeholder
+>
